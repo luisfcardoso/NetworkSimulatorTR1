@@ -5,7 +5,7 @@
 ## 💻 About the project
 
 This application is implemented with C++. Its goal is to implement a network simulator and show how layers work. This simulation includes application, link and physical layer.
-This program was created for the course "Computer Program Skills 2" (Prof. Rodrigo Bonifacio de Almeida) offered by Universidade de Brasília (UnB).
+This program was created for the course "Teleinformática e Rede 1" (Prof. Geraldo P. Rocha Filho) offered by Universidade de Brasília (UnB).
 
 <br>
 
