@@ -17,6 +17,7 @@ This program was created for the course "Computer Program Skills 2" (Prof. Rodri
 ### 🎲 Run the program
 ```Powershell
 g++ .\simulator.cpp .\src\application_layer.cpp .\src\link_layer.cpp .\src\physical_layer.cpp .\header\application_layer.hpp .\header\link_layer.hpp .\header\physical_layer.hpp
+.\a.exe 
 ```
 
 <br>
