@@ -36,7 +36,7 @@ void transmitter_application_layer(string message, int code_option) {
     vector<int> frame_binary_ascii_message = convert_message_to_ASCII(message);
 
     // Send Message to Transmitter Physical Layer
-    transmitter_physical_layer(frame_binary_ascii_message, code_option);
+    link_layer_data_transmitter(frame_binary_ascii_message, code_option);
 }
 
 void receiver_application_layer(vector<int> frame) {

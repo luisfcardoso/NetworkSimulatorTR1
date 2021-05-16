@@ -1,5 +1,8 @@
 #include "../header/physical_layer.hpp"    // Physical Layer Header
 
+//Parameters
+int error_percentage = 0;       // Error's percentage of the channel. For example: 0%, 10%, 20%...
+
 // Physical Layer Functions
 void transmitter_physical_layer(vector<int> frame, int code_option) {
     vector<int> stream_of_bits;  // Stream of bits (from frame)
@@ -26,21 +29,23 @@ void transmitter_physical_layer(vector<int> frame, int code_option) {
 }
 
 void channel(vector<int> stream, int code_option) {
-    int error, error_percentage;
+
     vector<int> stream_point_a, stream_point_b;  // Stream of point A and point B. The stream of bits will travel the path between these points.
 
-    error_percentage = 0;
     stream_point_a = stream;    // The point A receive the stream of bits
-    cout << "Transmission of bits: ";
+    cout << endl << "Transmission of bits: ";
 
     // The transmission will start
     int counter = 0;
     while (stream_point_b.size() < stream_point_a.size()) {
-        if((rand()%100)) { // TODO: Error probability
-            //stream_point_b += stream_point_a;
+        int error = (rand()%100) + 1;
+        if(error_percentage < error) { 
+            stream_point_b.push_back(stream_point_a[counter]); // Success
         } else {
-
+            stream_point_b.push_back(0x01); // Error!!!
         }
+        cout << stream_point_a[counter];
+        counter++;
     }
     cout << endl;
 
@@ -68,7 +73,7 @@ void receiver_physical_layer(vector<int> stream, int code_option) {
         break;
     }
 
-    receiver_application_layer(stream); // Send stream of bits to application layer
+    link_layer_data_receiver(stream); // Send stream of bits to application layer
 }   
 
 // Transmitter code Function
