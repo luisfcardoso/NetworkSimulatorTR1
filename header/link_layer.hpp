@@ -14,7 +14,6 @@ vector<int> link_layer_data_transmitter_framing(vector<int> frame);
 vector<int> link_layer_data_transmitter_error_control(vector<int> frame);
 vector<int> link_layer_data_transmitter_error_control_parity_bit(vector<int> frame);
 vector<int> link_layer_data_transmitter_error_control_CRC(vector<int> frame);
-//vector<int> link_layer_data_transmitter_error_control_Hamming_code(vector<int> frame);
 vector<int> link_layer_data_transmitter_count_character(vector<int> frame);
 vector<int> link_layer_data_transmitter_byte_stuffing(vector<int> frame);
 
@@ -23,7 +22,6 @@ vector<int> link_layer_data_receiver_unframing(vector<int> frame);
 vector<int> link_layer_data_receiver_error_control(vector<int> frame);
 vector<int> link_layer_data_receiver_error_control_parity_bit(vector<int> frame);
 vector<int> link_layer_data_receiver_error_control_CRC(vector<int> frame);
-//vector<int> link_layer_data_receiver_error_control_Hamming_code(vector<int> frame);
 vector<int> link_layer_data_receiver_count_character(vector<int> frame);
 vector<int> link_layer_data_receiver_byte_stuffing(vector<int> frame);
 

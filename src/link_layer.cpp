@@ -153,11 +153,6 @@ vector<int> link_layer_data_transmitter_error_control(vector<int> frame) {
             framed_frame_control = link_layer_data_transmitter_error_control_CRC(frame);
             break;
 
-        case 2:   // Hamming
-            cout << endl << "Type of error control: Hamming" << endl;
-            //framed_frame_control = link_layer_data_transmitter_error_control_Hamming_code(frame);
-            break;
-
         default:
             break;
     }
@@ -286,10 +281,6 @@ vector<int> link_layer_data_transmitter_error_control_CRC(vector<int> frame) {
 
     return frame_with_crc;
 }
-
-//vector<int> link_layer_data_transmitter_error_control_Hamming_code(vector<int> frame) {
-
-//}
 
 // Receiver
 void link_layer_data_receiver(vector<int> frame) {
@@ -434,11 +425,6 @@ vector<int> link_layer_data_receiver_error_control(vector<int> frame) {
             frame_out = link_layer_data_receiver_error_control_CRC(frame);
             break;
 
-        case 2:   // Hamming
-            cout << endl << "Type of error control: Hamming" << endl;
-            //frame_out = link_layer_data_receiver_error_control_Hamming_code(frame);
-            break;
-
         default:
             break;
     }
@@ -572,10 +558,6 @@ vector<int> link_layer_data_receiver_error_control_CRC(vector<int> frame) {
 
     return frame_without_crc;
 }
-
-//vector<int> link_layer_data_receiver_error_control_Hamming_code(vector<int> frame) {
-
-//}
 
 // Auxiliary Functions
 vector<int> add_character(vector<int> vector_in, char character) {
